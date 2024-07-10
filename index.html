@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      .choice img {
+        width: 200px;
+        height: 100px;
+        border-radius: 50px;
+        transition: transform 0.2s;
+      }
+      .choice img:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body class="bg-yellow-200 flex flex-col items-center justify-center min-h-screen font-semibold" >
+    <h1 class="text-4xl text-black mb-8">Rock Paper Scissors</h1>
+    <div class="choices flex justify-center space-x-4 mb-8">
+      <div class="choice" id="rock">
+        <img src="rock.png" alt="Rock" />
+      </div>
+      <div class="choice" id="paper">
+        <img src="paper.png" alt="Paper" />
+      </div>
+      <div class="choice" id="scissors">
+        <img src="scissor.png" alt="Scissors" />
+      </div>
+    </div>
+
+    <div class="score-board flex justify-center space-x-8 mb-8">
+      <div class="score text-center text-black">
+        <p id="user-score" class="text-3xl">0</p>
+        <p>You</p>
+      </div>
+      <div class="score text-center text-black">
+        <p id="comp-score" class="text-3xl">0</p>
+        <p>Comp</p>
+      </div>
+    </div>
+
+    <div class="msg-container">
+      <p id="msg" class="text-2xl text-black font-semibold">Play your move</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
